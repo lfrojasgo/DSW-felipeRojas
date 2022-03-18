@@ -14,7 +14,7 @@
 </head>
 <body>
 
-<div style="border-style: double; background-color: #F0F0F0;">
+<div style="border-style: double; background-color: #F0F0F0; width: 1152px; position: absolute; left: 62px; top: 45px;">
 	<h3 class="ColorAzul">Lex Box, Listas y enlaces</h3>
 	<nav>
 		<ul>
@@ -39,17 +39,95 @@
 		detalle en el resto de estas guías.</p>
 	</section>
 	<article>
-		Cuando describimos a flexbox 
+		<h3>Conceptos Básicos de flexbox</h3>
+		<br>Cuando describimos a flexbox 
 		como unidimensional destacamos el hecho que flexbox maneja el layout en 
 		una sola dimensión a la vez — ya sea como fila o como columna. Esto 
 		contrasta con el modelo bidimensional del Grid Layout de CSS, el cual 
-		controla columnas y filas a la vez.<br>
-		<img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="" height="57" width="179" >
+		controla columnas y filas a la vez.<br>Los dos ejes de flexbox<br><br>
+		Cuando trabajamos con flexbox necesitamos pensar en términos de dos ejes 
+		— el eje principal y el eje cruzado. El eje principal está definido por 
+		la propiedad flex-direction, y el eje cruzado es perpendicular a este. 
+		Todo lo que hacemos con flexbox está referido a estos dos ejes, por lo 
+		que vale la pena entender cómo trabajan desde el principio.
+		<h4>El eje principal</h4>
+		
+			<p>El eje principal está definido por flex-direction, que posee cuatro 
+		posibles valores:</p>
+		<p>row<br>row-reverse<br>column<br>column-reverse</p>
+		
+		<ul>
+			<li>row</li>
+			<li>row-reverse<li>column<li>column-reverse</ul>
+		<p>Si elegimos row o row-reverse, el eje principal 
+		correrá a lo largo de la fila según la dirección de la línea .</p>
+		<p><img height="152" src="../imagenes/Imagen00.png" width="522"></p>
+		<p>Al elegir column o column-reverse el eje principal correrá desde el borde 
+		superior de la página hasta el final — según la dirección del bloque.</p>
+		<p><img height="227" src="../imagenes/Imagen01.png" width="709"></p>
+		<p>If flex-direction is set to column the main 
+		axis runs in the block direction</p>
+		<h4>El eje cruzado</h4>
+		<p>El eje cruzado va perpendicular al eje principal, y por lo tanto si 
+		flex-direction (del eje principal) es row o row-reverse el eje cruzado 
+		irá por las columnas.</p>
+		<p><img height="125" src="../imagenes/Imagen02.png" width="666"></p><p>If flex-direction is set to row then the cross 
+		axis runs in the block direction.</p><p>Si el eje principal es column o 
+		column-reverse entonces el eje cruzado corre a lo largo de las filas.</p>
+		<p><img height="244" src="../imagenes/Imagen03.png" width="523"></p><p>
+		If flex-direction is set to column then the cross axis runs in the 
+		inline direction.</p><p>Entender cuál eje es cuál es importante cuando 
+		empezamos a mirar la alineación y justificación flexible de los ítems; 
+		flexbox posee propiedades que permiten alinear y justificar el contenido 
+		sobre un eje o el otro.<h3 class="ColorAzul">Listas HTML</h3>
+		<p>Las listas en HTML nos permite crear conjuntos de elementos en forma 
+		de lista dentro de una página, todos los cuales irán precedidos, 
+		generalmente, por un guión o número.<p>Los tipos de listas en HTML son 
+		los siguientes:<p>Listas ordenadas<br>Listas desordenadas<br>Listas de 
+		definiciones<br>Listas Ordenadas<p><br>Las listas en HTML ordenadas son 
+		aquellas que nos muestran los elementos de la lista en orden. Para 
+		representar el orden tendremos los elementos numerados. Es decir, cada 
+		uno de los elementos irá precedido de un número o letra que establezca 
+		su orden.<br><br>Las listas en HTML ordenadas se representan mediante el 
+		elemento OL.<p>&lt;ol&gt; ... &lt;/ol&gt;<p>Cada uno de los elementos de la lista 
+		ordenada se representará mediante el elemento LI.<p>&lt;ol&gt;<br>
+		<span lang="es">&nbsp;&nbsp;&nbsp; </span>&lt;li&gt;Elemento 1&lt;/li&gt;<br>
+		<span lang="es">&nbsp;&nbsp;&nbsp; </span>&lt;li&gt;Elemento 2&lt;/li&gt;<br>
+		<span lang="es">&nbsp;&nbsp;&nbsp; </span>...<br><span lang="es">&nbsp;&nbsp;&nbsp;
+		</span>&lt;li&gt;Elemento N&lt;/li&gt;<br>&lt;/ol&gt;<p>Un ejemplo de lista ordenada sería 
+		el siguiente:<p>&lt;ol&gt;<br><span lang="es">&nbsp;&nbsp;&nbsp; </span>
+		&lt;li&gt;Julio&lt;/li&gt;<br><span lang="es">&nbsp;&nbsp;&nbsp; </span>
+		&lt;li&gt;Carmen&lt;/li&gt;<br><span lang="es">&nbsp;&nbsp;&nbsp; </span>
+		&lt;li&gt;Ignacio&lt;/li&gt;<br><span lang="es">&nbsp;&nbsp;&nbsp; </span>
+		&lt;li&gt;Elena&lt;/li&gt;<br>&lt;/ol&gt;<p>Que produciría el siguiente efecto:</p>
+		
+		<ol>
+    	<li>Julio</li>
+    	<li>Carmen</li>
+    	<li>Ignacio</li>
+    	<li>Elena</li>
+		</ol>
+		</article>
+	
+	<article>
+		<h4 class="ColorAzul">Mockup</h4>
+		<img height="749" src="../imagenes/Mockup.png" width="875">
+	
 	</article>
+	
+		<article>
+		<h3 class="ColorAzul">Bibiografia</h3>
+		
+		<p>Gauchat, J. D. (2012). El gran libro de HTML5, CSS3 y Javascript. Marcombo.</p>
+		<p>Hickson, I., & Hyatt, D. (2011). Html5. W3C Working Draft WD-html5-20110525, 53.</p>
+	
+	</article>
+
+
 	<footer>
-		Agregar un pie de página usando la etiqueta &lt;footer&gt; con el correo y 
-		Skype del autor, y la fecha de actualización
-        <p><a href="fase2/design.html"></a>fase 2</p>
+		<h3>Actualizado 17/03/2022</h3>
+		Correo: lfrojasgo@unadvirtual.edu.co<br>Skype: felipe.rojas784<br>
+		Celular:3138389406
 	</footer>
 		
 </div>
